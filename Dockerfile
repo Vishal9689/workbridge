@@ -5,6 +5,6 @@ WORKDIR /app
 COPY . .
 
 RUN chmod +x mvnw
-RUN ./mvnw clean install -DskipTests
+RUN ./mvnw clean install -Dmaven.test.skip=true
 
 CMD ["java", "-jar", "target/*.jar"]
