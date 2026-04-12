@@ -1,5 +1,8 @@
 
 package com.workbridge.controller;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,6 +14,7 @@ import com.workbridge.dto.LoginRequest;
 import com.workbridge.dto.RegisterRequest;
 import com.workbridge.model.User;
 import com.workbridge.repository.UserRepo;
+import com.workbridge.security.JwtUtil;
 import com.workbridge.service.AuthService;
 
 @RestController
@@ -31,14 +35,21 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public User login(@RequestBody User user){
-
+    public Map<String, Object> login(@RequestBody User user){
         User existing = userRepo.findByEmail(user.getEmail());
 
         if(existing == null || !existing.getPassword().equals(user.getPassword())){
             throw new RuntimeException("Invalid credentials ❌");
         }
 
-        return existing; // 🔥 full user send (IMPORTANT)
+        JwtUtil jwt = new JwtUtil();
+        String token = jwt.generateToken(existing.getEmail());
+
+        Map<String, Object> res = new HashMap<>();
+        res.put("email", existing.getEmail());
+        res.put("photo", existing.getPhoto());
+        res.put("token", token);
+
+        return res;
     }
 }
