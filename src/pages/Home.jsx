@@ -4,54 +4,49 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-white dark:bg-black text-black dark:text-white overflow-hidden px-4">
+    <div className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
 
-      {/* 🔥 BACKGROUND GLOW */}
-      <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-indigo-500 opacity-20 blur-3xl rounded-full animate-glow"></div>
+      {/* 🔥 BACKGROUND IMAGE */}
+      <div
+        className="absolute inset-0 bg-center bg-cover blur-sm scale-105"
+        style={{
+          backgroundImage:
+            "url('https://chatgpt.com/s/m_69e4034489d08191addf079d9f282bb0')",
+        }}
+      ></div>
+
+      {/* 🔥 DARK OVERLAY (IMPORTANT) */}
+      <div className="absolute inset-0 bg-black/70"></div>
 
       {/* 🔥 CONTENT */}
-      <div className="relative z-10 w-full max-w-3xl flex flex-col items-center text-center gap-6">
+      <div className="relative z-10 text-center text-white max-w-2xl">
 
-        {/* 🔥 HEADING */}
-        <div className="space-y-3 animate-fadeUp">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
-            Your Skills = Income 💰
-          </h1>
-
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-indigo-500">
+        {/* 🔥 TAGLINE */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+          Your Skills = Income 💰 <br />
+          <span className="text-indigo-400">
             Your Payment = Faster Work ⚡
-          </h2>
-        </div>
+          </span>
+        </h1>
 
         {/* 🔥 DESCRIPTION */}
-        <div className="animate-fadeUp space-y-2">
-          <p className="text-sm sm:text-base md:text-lg text-slate-500 dark:text-slate-300">
-            Work your way, based on your skills 👇
-          </p>
-
-          <p className="text-slate-400 text-sm sm:text-base">
-            If you have skills, become a freelancer and earn 💻
-          </p>
-
-          <p className="text-slate-400 text-sm sm:text-base">
-            If not, hire a freelancer and get your work done 🤝
-          </p>
-
-          <p className="text-slate-400 text-sm sm:text-base">
-            Opportunities are available for everyone.
-          </p>
-        </div>
+        <p className="text-sm sm:text-base md:text-lg text-slate-300 mb-8">
+          Work your way, based on your skills 👇 <br />
+          If you have skills, become a freelancer and earn 💻 <br />
+          If not, hire a freelancer and get your work done 🤝 <br />
+          Opportunities are available for everyone.
+        </p>
 
         {/* 🔥 BUTTONS */}
-        <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fadeUp mt-2">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
           <button
             onClick={() => {
               localStorage.setItem("role", "USER");
               navigate("/services");
             }}
-            className="w-full sm:w-auto bg-green-500 px-6 py-3 rounded-lg text-white font-medium 
-            hover:scale-105 hover:bg-green-600 transition duration-300 shadow-lg"
+            className="bg-green-500 px-6 py-3 rounded-lg text-white 
+            hover:scale-105 hover:bg-green-600 transition shadow-lg"
           >
             Continue as User
           </button>
@@ -61,8 +56,8 @@ function Home() {
               localStorage.setItem("role", "FREELANCER");
               navigate("/market");
             }}
-            className="w-full sm:w-auto bg-indigo-600 px-6 py-3 rounded-lg text-white font-medium 
-            hover:scale-105 hover:bg-indigo-700 transition duration-300 shadow-lg"
+            className="bg-indigo-600 px-6 py-3 rounded-lg text-white 
+            hover:scale-105 hover:bg-indigo-700 transition shadow-lg"
           >
             Continue as Freelancer
           </button>
