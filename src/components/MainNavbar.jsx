@@ -34,7 +34,7 @@ function MainNavbar({ dark, setDark }) {
           onClick={() => navigate("/home")}
           className="text-xl font-bold text-indigo-500 cursor-pointer"
         >
-          WorkBridge 🚀
+          WorkBridge 
         </h1>
 
         {/* 🔥 Desktop Menu */}
