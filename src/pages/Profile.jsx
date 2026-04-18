@@ -47,9 +47,12 @@ function Profile() {
 
       <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl shadow w-80 text-center">
 
+        {/* ✅ FIXED IMAGE (DEFAULT + USER IMAGE) */}
         <img
           src={preview || "/default.png"}
-          className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+          onError={(e) => (e.target.src = "/default.png")}
+          className="w-24 h-24 rounded-full mx-auto mb-4 object-cover object-top border-2 border-indigo-500"
+          alt="profile"
         />
 
         <input type="file" onChange={handleFile} className="mb-3" />
@@ -77,7 +80,7 @@ function Profile() {
 
         <button
           onClick={handleSave}
-          className="bg-indigo-600 text-white px-4 py-2 rounded"
+          className="bg-indigo-600 hover:bg-indigo-700 transition text-white px-4 py-2 rounded"
         >
           Save Profile
         </button>
