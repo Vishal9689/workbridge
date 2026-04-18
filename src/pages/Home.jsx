@@ -4,54 +4,72 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 bg-white dark:bg-black text-black dark:text-white overflow-hidden">
+    <div className="relative min-h-screen flex items-center justify-center bg-white dark:bg-black text-black dark:text-white overflow-hidden px-4">
 
       {/* 🔥 BACKGROUND GLOW */}
-      <div className="absolute w-[500px] h-[500px] bg-indigo-500 opacity-20 blur-3xl rounded-full animate-glow"></div>
+      <div className="absolute w-[600px] h-[600px] bg-indigo-500 opacity-20 blur-3xl rounded-full animate-glow"></div>
 
-      {/* 🔥 Tagline */}
-      <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight animate-fadeUp">
-        Your Skills = Income 💰 <br />
-        <span className="text-indigo-500">
-          Your Payment = Faster Work ⚡
-        </span>
-      </h1>
+      {/* 🔥 MAIN CONTENT */}
+      <div className="relative z-10 max-w-4xl w-full grid gap-8 text-center">
 
-      {/* 🔥 Description */}
-      <p className="text-slate-500 dark:text-slate-300 max-w-xl mb-8 animate-fadeUp">
-        Work your way, based on your skills 👇  
-        If you have skills, become a freelancer and earn 💻  
-        If not, hire a freelancer and get your work done 🤝  
-        options are available for you.
-      </p>
+        {/* 🔥 HEADING */}
+        <div className="space-y-4 animate-fadeUp">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            Your Skills = Income 💰
+          </h1>
 
-      {/* 🔥 Buttons */}
-      <div className="flex gap-4 mb-6 animate-fadeUp">
+          <h2 className="text-2xl md:text-3xl font-semibold text-indigo-500">
+            Your Payment = Faster Work ⚡
+          </h2>
+        </div>
 
-        <button
-          onClick={() => {
-            localStorage.setItem("role", "USER");
-            navigate("/services");
-          }}
-          className="bg-green-500 px-6 py-2 rounded text-white 
-          hover:scale-105 hover:bg-green-600 transition duration-300 shadow-lg"
-        >
-          Continue as User
-        </button>
+        {/* 🔥 DESCRIPTION */}
+        <div className="animate-fadeUp">
+          <p className="text-slate-500 dark:text-slate-300 text-lg leading-relaxed">
+            Work your way, based on your skills 👇
+          </p>
 
-        <button
-          onClick={() => {
-            localStorage.setItem("role", "FREELANCER");
-            navigate("/market");
-          }}
-          className="bg-indigo-600 px-6 py-2 rounded text-white 
-          hover:scale-105 hover:bg-indigo-700 transition duration-300 shadow-lg"
-        >
-          Continue as Freelancer
-        </button>
+          <p className="text-slate-400 mt-2">
+            If you have skills, become a freelancer and earn 💻
+          </p>
+
+          <p className="text-slate-400">
+            If not, hire a freelancer and get your work done 🤝
+          </p>
+
+          <p className="text-slate-400">
+            Opportunities are available for everyone.
+          </p>
+        </div>
+
+        {/* 🔥 BUTTONS */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fadeUp">
+
+          <button
+            onClick={() => {
+              localStorage.setItem("role", "USER");
+              navigate("/services");
+            }}
+            className="bg-green-500 px-6 py-3 rounded-lg text-white font-medium 
+            hover:scale-105 hover:bg-green-600 transition duration-300 shadow-lg"
+          >
+            Continue as User
+          </button>
+
+          <button
+            onClick={() => {
+              localStorage.setItem("role", "FREELANCER");
+              navigate("/market");
+            }}
+            className="bg-indigo-600 px-6 py-3 rounded-lg text-white font-medium 
+            hover:scale-105 hover:bg-indigo-700 transition duration-300 shadow-lg"
+          >
+            Continue as Freelancer
+          </button>
+
+        </div>
 
       </div>
-
     </div>
   );
 }
