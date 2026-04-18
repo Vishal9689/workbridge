@@ -15,7 +15,7 @@ function Home() {
       </h1>
  
 
-      {/* 🔥 Description (तुझ्या style मध्ये) */}
+    
    <p className="text-slate-500 dark:text-slate-300 max-w-xl mb-8">
        Work your way, based on your skills 👇  
        If you have skills, become a freelancer and earn 💻  

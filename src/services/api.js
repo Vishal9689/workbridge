@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-baseURL: "https://workbridge-askr.onrender.com"
+ baseURL: "https://workbridge-mzl2.onrender.com"
 });
 
 // 🔐 attach token
