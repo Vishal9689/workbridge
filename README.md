@@ -38,14 +38,14 @@ flowchart TD
     C --> D[Payment Request Generated]
     D --> E[User Approves Payment]
 
-    E --> I[Payment Stored in Admin (Escrow)]
-    I --> J[Freelancer Gets Notification: Payment Secured, Start Work]
+    E --> I[Payment Stored in Admin Escrow]
+    I --> J[Freelancer Notified Payment Secured Start Work]
 
     J --> F[Freelancer Completes Task]
     F --> G[Work Delivered]
 
     G --> H[Task Marked Completed]
-    H --> K[Admin Releases Payment to Freelancer 💰]
+    H --> K[Admin Releases Payment to Freelancer]
 
 
 ---
