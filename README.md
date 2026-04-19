@@ -1,4 +1,4 @@
-#  WorkBridge — Freelancing Platform
+#  WorkBridge — Connecting Skilled People with Task Seekers
 
 > Connecting skilled individuals with real-world opportunities
 
