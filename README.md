@@ -1,16 +1,42 @@
-# React + Vite
+# 🚀 WorkBridge — Freelancing Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Connecting skilled individuals with real-world opportunities
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
+🔗 https://your-live-link  
+🔗 https://your-frontend-vercel-link  
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 About WorkBridge
 
-## Expanding the ESLint configuration
+WorkBridge is a full-stack freelancing platform designed to bridge the gap between users who need work done and skilled freelancers who are looking for opportunities.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The platform enables a seamless workflow where tasks can be posted, accepted, executed, and completed with a structured payment system.
+
+---
+
+## ⚙️ Tech Stack
+
+| Layer       | Technology        |
+|------------|------------------|
+| Frontend   | React.js (Vite)  |
+| Backend    | Spring Boot      |
+| Database   | PostgreSQL       |
+| Deployment | Render, Vercel   |
+
+---
+
+## 🔄 System Workflow
+
+```mermaid
+flowchart TD
+    A[User Posts Task] --> B[Task appears in Marketplace]
+    B --> C[Freelancer Accepts Task]
+    C --> D[Payment Request Generated]
+    D --> E[User Approves Payment]
+    E --> F[Freelancer Completes Task]
+    F --> G[Work Delivered]
+    G --> H[Task Marked Completed]
