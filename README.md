@@ -1,4 +1,4 @@
-# 🚀 WorkBridge — Freelancing Platform
+#  WorkBridge — Freelancing Platform
 
 > Connecting skilled individuals with real-world opportunities
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 About WorkBridge
+##  About WorkBridge
 
 WorkBridge is a full-stack freelancing platform designed to bridge the gap between users who need work done and skilled freelancers who are looking for opportunities.
 
@@ -28,7 +28,7 @@ The platform enables a seamless workflow where tasks can be posted, accepted, ex
 
 ---
 
-## 🔄 System Workflow
+##  System Workflow
 
 ```mermaid
 flowchart TD
