@@ -5,8 +5,7 @@
 ---
 
 ## 🌐 Live Demo
-🔗 https://workbridge-phi.vercel.app/  
-
+🔗 https://workbridge-phi.vercel.app/
 
 ---
 
@@ -33,29 +32,16 @@ The platform enables a seamless workflow where tasks can be posted, accepted, ex
 
 ```mermaid
 flowchart TD
-    A[User Posts Task] --> B[Task appears in Marketplace]
-    B --> C[Freelancer Accepts Task]
-    C --> D[Payment Request Generated]
-    D --> E[User Approves Payment]
+A[User Posts Task] --> B[Task appears in Marketplace]
+B --> C[Freelancer Accepts Task]
+C --> D[Payment Request Generated]
+D --> E[User Approves Payment]
 
-    E --> I[Payment Stored in Admin Escrow]
-    I --> J[Freelancer Notified Payment Secured Start Work]
+E --> I[Payment Stored in Admin Escrow]
+I --> J[Freelancer Notified Payment Secured Start Work]
 
-    J --> F[Freelancer Completes Task]
-    F --> G[Work Delivered]
+J --> F[Freelancer Completes Task]
+F --> G[Work Delivered]
 
-    G --> H[Task Marked Completed]
-    H --> K[Admin Releases Payment to Freelancer]
-
-
----
-
-## ⚠️ Important Note (Server Cold Start)
-
-The backend is hosted on a free tier cloud service (Render), which may go into sleep mode after inactivity.
-
-👉 On the first request, it may take around **30–50 seconds** for the server to wake up.
-
-Please wait for a few seconds on the first load. Subsequent requests will be much faster.
-
----
+G --> H[Task Marked Completed]
+H --> K[Admin Releases Payment to Freelancer]
